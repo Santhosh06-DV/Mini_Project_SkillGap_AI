@@ -1,0 +1,703 @@
+.onboarding-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f5f6fa;
+}
+
+.onboarding-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+
+.onboarding-card {
+  background: #fff;
+  border: 1px solid #eaedf2;
+  border-radius: 16px;
+  padding: 40px 44px;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  animation: fadeIn 0.4s ease both;
+}
+
+.onboarding-welcome {
+  margin-bottom: 28px;
+}
+
+.onboarding-welcome h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px; font-weight: 700;
+  color: #0d1b2a; letter-spacing: -0.3px;
+  margin-bottom: 6px;
+}
+
+.onboarding-welcome p {
+  font-size: 14px; color: #6b7280; line-height: 1.5;
+}
+
+.onboarding-step-label {
+  font-size: 11px; font-weight: 600;
+  color: #1a56db; letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+.onboarding-step-label::after {
+  content: '';
+  flex: 1; height: 1px;
+  background: #eaedf2;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.role-card {
+  border: 1px solid #eaedf2;
+  border-radius: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  background: #fff;
+}
+
+.role-card:hover { border-color: #93a8e0; background: #f8f9ff; }
+
+.role-card.selected {
+  border-color: #1a56db;
+  background: #eef2ff;
+}
+
+.role-card-title {
+  font-size: 13px; font-weight: 500;
+  color: #0d1b2a; margin-bottom: 3px;
+}
+
+.role-card.selected .role-card-title { color: #1a56db; }
+
+.role-card-sub {
+  font-size: 11px; color: #9ca3af;
+}
+
+.skill-input-area { margin-bottom: 24px; }
+
+.skill-input-area label {
+  display: block; font-size: 13px;
+  font-weight: 500; color: #374151;
+  margin-bottom: 8px;
+}
+
+.skill-input-row {
+  display: flex; gap: 8px; margin-bottom: 10px;
+}
+
+.skill-input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #eaedf2;
+  border-radius: 8px;
+  font-size: 13px; color: #0d1b2a;
+  background: #fff; outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.skill-input-row input:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+}
+
+.btn-add-skill {
+  padding: 10px 16px;
+  background: #eef2ff;
+  color: #1a56db;
+  border: 1px solid #c7d2fe;
+  border-radius: 8px;
+  font-size: 13px; font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.btn-add-skill:hover { background: #dde7ff; }
+
+.skill-chips {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  min-height: 28px;
+}
+
+.skill-chip {
+  display: flex; align-items: center; gap: 5px;
+  background: #eef2ff; border: 1px solid #c7d2fe;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 12px; color: #1a56db;
+}
+
+.skill-chip button {
+  background: none; border: none;
+  cursor: pointer; color: #93a8e0;
+  font-size: 14px; line-height: 1;
+  padding: 0; display: flex; align-items: center;
+}
+
+.skill-chip button:hover { color: #dc2626; }
+
+.skills-empty {
+  font-size: 12px; color: #d1d5db;
+  font-style: italic;
+}
+
+.alert-error {
+  background: #fee2e2; border: 1px solid #fca5a5;
+  border-radius: 8px; padding: 10px 14px;
+  font-size: 13px; color: #dc2626;
+  margin-bottom: 16px;
+}
+
+.btn-analyze {
+  width: 100%;
+  padding: 13px;
+  background: #1a56db; color: #fff;
+  border: none; border-radius: 8px;
+  font-size: 14px; font-weight: 500;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-analyze:hover { background: #1447c0; }
+.btn-analyze:active { transform: scale(0.99); }
+.btn-analyze:disabled { background: #93a8e0; cursor: not-allowed; }
+
+/* ── Level selector ── */
+.level-select-wrap {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.level-btn {
+  padding: 8px 11px;
+  border-radius: 7px;
+  border: 1px solid #eaedf2;
+  background: #f9fafb;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.level-btn:hover { border-color: #d1d8e8; background: #f0f2f8; }
+
+.level-btn.active-basic {
+  background: #fff7ed;
+  color: #c2410c;
+  border-color: #fed7aa;
+}
+
+.level-btn.active-intermediate {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.level-btn.active-expert {
+  background: #f0fdf4;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.skill-chip-level {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+/* ── Role Search Dropdown ── */
+.role-search-wrap,
+.role-search-wrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.role-search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.role-search-icon {
+  position: absolute;
+  left: 13px;
+  color: #9ca3af;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.role-search-input {
+  width: 100%;
+  padding: 11px 80px 11px 38px;
+  border: 1px solid #eaedf2;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #0d1b2a;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.role-search-input:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+}
+
+.role-search-input.role-selected {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  color: #15803d;
+  font-weight: 500;
+}
+
+.role-selected-badge {
+  position: absolute;
+  right: 34px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 2px 8px;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.role-selected-check {
+  position: absolute;
+  right: 36px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.role-chevron {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.role-chevron.flipped {
+  transform: rotate(180deg);
+}
+
+.role-search-input-wrap.open .role-search-input {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.role-search-input-wrap.selected .role-search-input {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  color: #15803d;
+  font-weight: 500;
+}
+
+.role-dropdown {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Dropdown list */
+.role-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0; right: 0;
+  background: #fff;
+  border: 1px solid #eaedf2;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  z-index: 100;
+  overflow: hidden;
+  animation: dropdownFade 0.15s ease both;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.role-dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.12s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.role-dropdown-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.role-dropdown-item span:nth-child(2) {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0d1b2a;
+}
+
+.role-dropdown-item.active span:nth-child(2) {
+  color: #1a56db;
+}
+
+.role-dropdown-tick {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.role-dropdown-item:last-child { border-bottom: none; }
+
+.role-dropdown-item:hover {
+  background: #f5f7ff;
+}
+
+.role-dropdown-item.active {
+  background: #eef2ff;
+}
+
+.role-dropdown-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0d1b2a;
+  margin-bottom: 2px;
+}
+
+.role-dropdown-item.active .role-dropdown-name {
+  color: #1a56db;
+}
+
+.role-dropdown-sub {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.role-dropdown-empty {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* ── Skill Search Dropdown ── */
+.skill-search-wrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.skill-search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.skill-search-icon {
+  position: absolute;
+  left: 13px;
+  color: #9ca3af;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.skill-search-input {
+  width: 100%;
+  padding: 11px 80px 11px 38px;
+  border: 1px solid #eaedf2;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #0d1b2a;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.skill-search-input:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+}
+
+.skill-search-input-wrap.open .skill-search-input {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.skill-add-inline-btn {
+  position: absolute;
+  right: 36px;
+  background: #1a56db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.skill-add-inline-btn:hover { background: #1447c0; }
+
+.skill-chevron {
+  position: absolute;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.skill-chevron.flipped { transform: rotate(180deg); }
+
+/* Skill dropdown list */
+.skill-dropdown {
+  position: absolute;
+  top: calc(100% + 0px);
+  left: 0; right: 0;
+  background: #fff;
+  border: 1px solid #1a56db;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  z-index: 100;
+  overflow: hidden;
+  max-height: 220px;
+  overflow-y: auto;
+  animation: dropdownFade 0.15s ease both;
+}
+
+.skill-dropdown-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.12s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.skill-dropdown-item:last-child { border-bottom: none; }
+.skill-dropdown-item:hover { background: #f5f7ff; }
+
+.skill-dropdown-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.skill-dropdown-item span:nth-child(2) {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0d1b2a;
+  text-transform: capitalize;
+}
+
+.skill-dropdown-empty {
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.skill-dropdown-custom {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f7ff;
+  border-top: 1px solid #eaedf2;
+  transition: background 0.12s;
+}
+.skill-dropdown-custom:hover { background: #eef2ff; }
+
+.skill-dropdown-custom-icon {
+  font-size: 13px;
+  color: #1a56db;
+}
+
+.skill-dropdown-custom span:nth-child(2) {
+  font-size: 13px;
+  color: #374151;
+}
+.skill-dropdown-custom strong {
+  color: #1a56db;
+}
+
+/* ── AI Analyzing Overlay (Onboarding) ── */
+.analyzing-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 27, 42, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.25s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.analyzing-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 48px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+  animation: slideUp 0.3s ease both;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.analyzing-icon-wrap {
+  position: relative;
+  width: 72px; height: 72px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analyzing-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(26, 86, 219, 0.12);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.analyzing-pulse.done {
+  background: rgba(22, 163, 74, 0.12);
+  animation: none;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.3); opacity: 0.5; }
+}
+
+.analyzing-icon {
+  font-size: 32px;
+  position: relative;
+  z-index: 1;
+  animation: spin 2s linear infinite;
+}
+.analyzing-pulse.done + .analyzing-icon { animation: none; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.analyzing-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px; font-weight: 700;
+  color: #0d1b2a; margin-bottom: 4px;
+}
+
+.analyzing-role {
+  font-size: 13px; color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.analyzing-progress-track {
+  height: 6px; background: #eaedf2;
+  border-radius: 99px; overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.analyzing-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a56db, #6366f1);
+  border-radius: 99px;
+  transition: width 0.15s linear;
+}
+
+.analyzing-percent {
+  font-size: 12px; font-weight: 600;
+  color: #1a56db; margin-bottom: 24px;
+  text-align: right;
+}
+
+.analyzing-steps {
+  display: flex; flex-direction: column;
+  gap: 10px; text-align: left;
+}
+
+.analyzing-step {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 12px; border-radius: 8px;
+  background: #f9fafb; border: 1px solid #eaedf2;
+  opacity: 0; transform: translateX(-10px);
+  transition: all 0.35s ease;
+}
+
+.analyzing-step.visible {
+  opacity: 1; transform: translateX(0);
+  background: #f0fdf4; border-color: #bbf7d0;
+}
+
+.analyzing-step.active {
+  opacity: 1; transform: translateX(0);
+  background: #eef2ff; border-color: #c7d2fe;
+  animation: stepPulse 0.8s ease infinite;
+}
+
+@keyframes stepPulse {
+  0%, 100% { border-color: #c7d2fe; }
+  50%       { border-color: #818cf8; }
+}
+
+.analyzing-step-icon {
+  font-size: 15px; width: 20px; text-align: center;
+}
+
+.analyzing-step-text {
+  font-size: 13px; font-weight: 500; color: #374151;
+}
+
+.analyzing-step.visible .analyzing-step-text { color: #15803d; }
+.analyzing-step.active  .analyzing-step-text { color: #1d4ed8; }

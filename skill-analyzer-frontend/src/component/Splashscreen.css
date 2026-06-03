@@ -1,0 +1,184 @@
+.splash-root {
+  position: fixed;
+  inset: 0;
+  background: #050a14;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 1s cubic-bezier(0.4, 0, 1, 1), transform 1s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.splash-root.fade-out {
+  opacity: 0;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.splash-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.splash-brand {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease 0.6s, transform 0.9s ease 0.6s;
+  pointer-events: none;
+}
+
+.splash-brand.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.splash-brand-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(26, 86, 219, 0.2);
+  border: 1px solid rgba(26, 86, 219, 0.5);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  backdrop-filter: blur(8px);
+}
+
+.splash-brand-icon span {
+  width: 22px;
+  height: 22px;
+  background: #1a56db;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 0 20px rgba(26, 86, 219, 0.8);
+}
+
+.splash-brand h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.splash-brand h1 em {
+  font-style: normal;
+  color: #1a56db;
+}
+
+.splash-brand p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.5px;
+}
+
+.splash-progress {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.splash-progress-bar {
+  width: 160px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.splash-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a56db, #60a5fa);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 7.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.splash-progress-fill.running {
+  width: 100%;
+}
+
+.splash-progress-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.splash-logo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+/* ── Brand slides up ── */
+.splash-brand {
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.splash-brand.slide-up {
+  transform: translateY(-220px) scale(1.18) !important;
+  opacity: 1 !important;
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.splash-brand.slide-up h1 {
+  font-size: 48px;
+  letter-spacing: -1.5px;
+  transition: font-size 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Quote fades in at center ── */
+.splash-quote {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(24px) scale(0.95);
+  transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1), transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  margin-top: -40px;
+  will-change: opacity, transform;
+}
+
+.splash-quote.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.splash-quote p {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.splash-quote p:first-child {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.splash-quote p:last-child {
+  color: #60a5fa;
+}
