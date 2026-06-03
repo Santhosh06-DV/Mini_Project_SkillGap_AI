@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+skill-analyzer-frontend/node_modules/
+
+# Environment files (sensitive)
+.env
+.env.local
+.env.production
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Java/Spring Boot build
+target/
+*.jar
+*.war
+*.class
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build output
+build/
+dist/
+
+# Spring Boot sensitive config
+**/application.properties
+**/application.yml
+*/application-prod.properties

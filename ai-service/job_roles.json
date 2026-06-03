@@ -1,0 +1,122 @@
+[
+    {
+        "role": "Data Scientist",
+        "skills": ["python", "machine learning", "statistics", "sql", "pandas", "data visualization", "numpy", "scikit-learn", "jupyter", "deep learning"]
+    },
+    {
+        "role": "AI Engineer",
+        "skills": ["python", "deep learning", "tensorflow", "computer vision", "pytorch", "nlp", "machine learning", "cuda", "model deployment", "mlops"]
+    },
+    {
+        "role": "Full Stack Developer",
+        "skills": ["javascript", "react", "node.js", "sql", "rest api", "html", "css", "mongodb", "git", "docker"]
+    },
+    {
+        "role": "Backend Developer",
+        "skills": ["java", "spring boot", "sql", "microservices", "rest api", "docker", "git", "postgresql", "redis", "kafka"]
+    },
+    {
+        "role": "Frontend Developer",
+        "skills": ["javascript", "react", "html", "css", "typescript", "git", "responsive design", "redux", "webpack", "figma"]
+    },
+    {
+        "role": "Mobile App Developer",
+        "skills": ["react native", "flutter", "dart", "javascript", "android", "ios", "firebase", "rest api", "git", "ui/ux"]
+    },
+    {
+        "role": "Android Developer",
+        "skills": ["java", "kotlin", "android", "xml", "firebase", "rest api", "git", "sqlite", "mvvm", "jetpack compose"]
+    },
+    {
+        "role": "iOS Developer",
+        "skills": ["swift", "objective-c", "ios", "xcode", "firebase", "rest api", "git", "core data", "swiftui", "cocoapods"]
+    },
+    {
+        "role": "DevOps Engineer",
+        "skills": ["docker", "kubernetes", "jenkins", "aws", "linux", "git", "ci/cd", "ansible", "terraform", "monitoring"]
+    },
+    {
+        "role": "Cloud Engineer",
+        "skills": ["aws", "azure", "google cloud", "docker", "kubernetes", "terraform", "linux", "networking", "security", "ci/cd"]
+    },
+    {
+        "role": "Cybersecurity Engineer",
+        "skills": ["networking", "linux", "ethical hacking", "penetration testing", "firewalls", "python", "cryptography", "siem", "incident response", "vulnerability assessment"]
+    },
+    {
+        "role": "Data Engineer",
+        "skills": ["python", "sql", "spark", "hadoop", "kafka", "airflow", "aws", "data pipelines", "etl", "postgresql"]
+    },
+    {
+        "role": "Machine Learning Engineer",
+        "skills": ["python", "machine learning", "tensorflow", "pytorch", "mlops", "docker", "rest api", "sql", "scikit-learn", "model deployment"]
+    },
+    {
+        "role": "Database Administrator",
+        "skills": ["sql", "mysql", "postgresql", "mongodb", "oracle", "database design", "backup recovery", "performance tuning", "linux", "security"]
+    },
+    {
+        "role": "Software Architect",
+        "skills": ["system design", "microservices", "cloud", "design patterns", "rest api", "docker", "kubernetes", "sql", "agile", "leadership"]
+    },
+    {
+        "role": "QA Engineer",
+        "skills": ["manual testing", "automation testing", "selenium", "java", "python", "api testing", "postman", "jira", "git", "agile"]
+    },
+    {
+        "role": "UI/UX Designer",
+        "skills": ["figma", "adobe xd", "sketch", "wireframing", "prototyping", "user research", "html", "css", "typography", "design systems"]
+    },
+    {
+        "role": "Blockchain Developer",
+        "skills": ["solidity", "ethereum", "web3.js", "javascript", "smart contracts", "truffle", "hardhat", "defi", "nft", "cryptography"]
+    },
+    {
+        "role": "Embedded Systems Engineer",
+        "skills": ["c", "c++", "embedded c", "microcontrollers", "rtos", "arduino", "raspberry pi", "assembly", "iot", "hardware debugging"]
+    },
+    {
+        "role": "Game Developer",
+        "skills": ["unity", "c#", "unreal engine", "c++", "3d modeling", "physics simulation", "opengl", "game design", "blender", "git"]
+    },
+    {
+        "role": "Site Reliability Engineer",
+        "skills": ["linux", "python", "kubernetes", "docker", "monitoring", "alerting", "ci/cd", "aws", "incident management", "automation"]
+    },
+    {
+        "role": "Product Manager",
+        "skills": ["product roadmap", "agile", "user research", "data analysis", "jira", "stakeholder management", "wireframing", "market research", "sql", "communication"]
+    },
+    {
+        "role": "Scrum Master",
+        "skills": ["agile", "scrum", "jira", "team management", "sprint planning", "retrospectives", "kanban", "conflict resolution", "communication", "risk management"]
+    },
+    {
+        "role": "Data Analyst",
+        "skills": ["sql", "python", "excel", "tableau", "power bi", "data visualization", "statistics", "pandas", "reporting", "business intelligence"]
+    },
+    {
+        "role": "NLP Engineer",
+        "skills": ["python", "nlp", "transformers", "bert", "spacy", "nltk", "deep learning", "pytorch", "tensorflow", "text classification"]
+    },
+    {
+        "role": "Computer Vision Engineer",
+        "skills": ["python", "computer vision", "opencv", "deep learning", "pytorch", "tensorflow", "image processing", "cnn", "object detection", "cuda"]
+    },
+    {
+        "role": "Network Engineer",
+        "skills": ["networking", "cisco", "routing", "switching", "tcp/ip", "firewalls", "linux", "vpn", "network security", "monitoring"]
+    },
+    {
+        "role": "Systems Engineer",
+        "skills": ["linux", "windows server", "networking", "virtualization", "docker", "aws", "bash scripting", "monitoring", "security", "storage"]
+    },
+    {
+        "role": "Technical Writer",
+        "skills": ["documentation", "markdown", "api documentation", "git", "html", "communication", "research", "editing", "confluence", "jira"]
+    },
+    {
+        "role": "AR/VR Developer",
+        "skills": ["unity", "c#", "unreal engine", "openxr", "3d modeling", "blender", "c++", "spatial computing", "shader programming", "git"]
+    }
+]
